@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+:root {
+  --main-color: #0d1b2a;
+  --text-color: #1b263b;
+  --background: #6b8096;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+ul > li {
+  cursor: pointer;
+  list-style: none;
+}
+
+/* media queries */
+
+/* Extra Small Devices (Mobile Phones) */
+@media only screen and (max-width: 576px) {
+  /* Your CSS styles for extra small devices go here */
+  body {
+    width: 100vw;
+    height: 100vh;
+    background: var(--main-color);
+    color: var(--text-color);
+  }
+  nav {
+    background: var(--background);
+    width: 100%;
+    padding: 1em 2em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    border: 5px solid var(--background) ;
+  }
+  .nav-links {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-radius: 5px;
+    padding: 1em 2em;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+  }
+  .d-none {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+  }
+  .nav-links > li {
+    color: #fff;
+    padding: 0.5em 0;
+  }
+  .hc {
+    font-family: "Anonymous Pro", monospace;
+    letter-spacing: -5px;
+    font-size: 32px;
+  }
+  .icon {
+    font-size: 26px;
+  }
+  .hc,
+  .icon {
+    cursor: pointer;
+    color: var(--main-color);
+  }
+
+  .socials {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     font-size: 20px;
+  }
+
+  main {
+    height: calc(100vh - 70.5px);
+    background-color: var(--background);
+    padding: 1em 3em;
+    z-index: 1;
+    border: 2px solid var(--background);
+  }
+
+  .speech-b {
+    background: #fff;
+    color: var(--main-color);
+    border-radius: 2em;
+    padding: 3em;
+    text-align: center;
+  }
+
+  .speech-b::after {
+    position: absolute;
+    content: "";
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 100px 100px 0 0;
+    border-color: #fff transparent transparent transparent;
+    transform: rotate(0deg);
+    left: 8em;
+  }
+
+  .speech-b > h1 {
+    margin-bottom: 0.5em;
+    font-size: 30px;
+    font-weight: 400;
+  }
+  .speech-b > p {
+    line-height: 1.5;
+    font-weight: 300;
+  }
+  .home-img {
+    width: 100%;
+    margin: 5em 0;
+  }
+  .rotate {
+    transform-origin: top right;
+    transform: rotate(15deg);
+  }
+}
+
+/* Small Devices (Mobile Phones and Small Tablets) */
+@media only screen and (min-width: 577px) and (max-width: 767px) {
+  /* Your CSS styles for small devices go here */
+}
+
+/* Medium Devices (Tablets and Small Laptops) */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  /* Your CSS styles for medium devices go here */
+}
+
+/* Large Devices (Laptops and Desktops) */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  /* Your CSS styles for large devices go here */
+}
+
+/* Extra Large Devices (Large Desktops and High-Resolution Screens) */
+@media only screen and (min-width: 1200px) {
+  /* Your CSS styles for extra large devices go here */
+}
