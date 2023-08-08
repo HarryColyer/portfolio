@@ -253,15 +253,8 @@ a {
     box-shadow: $sm-box-shadow-r;
     margin-top: 5em;
     font-size: $xs-font-size;
-    .img-container {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      img {
-        width: 80%;
-      }
-    }
-    h4 {
+    
+    h3 {
       margin: 10px 0 10px 0;
       
       font-size: $md-font-size;
@@ -280,11 +273,12 @@ a {
         width: 50%;
         text-align: center;
         font-size: $xs-font-size;
+        margin-top: 10px;
         &:first-of-type {
-          margin-right: 5px;
+          margin-right: 10px;
         }
         &:last-of-type {
-          margin-left: 5px;
+          margin-left: 10px;
         }
       }
     }
@@ -520,6 +514,21 @@ a {
           font-size: $md-font-size;
         }
       }
+    }
+  }
+
+  //Projects Page 
+  .projects {
+    display: flex;
+    flex-direction: row;
+    height: $one-page;
+    h2 {
+      position: absolute;
+      left: 15%;
+      top: 10px;
+    }
+    section {
+      margin: 2em;
     }
   }
 }
