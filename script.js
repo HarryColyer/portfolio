@@ -1,11 +1,11 @@
 const homeBtn = document.querySelector(".nav-icon");
-
 const toggle = document.querySelector(".nav-toggle");
-const navLinks = document.querySelector(".nav-links");
 const pageLinks = document.querySelectorAll(".nav-link");
 const homeContactBtn = document.querySelector(".home-btn");
-
 const pages = document.querySelectorAll(".page");
+const navLinks = document.querySelector(".nav-links");
+
+
 
 // Functions
 const updatePages = () => {
@@ -26,6 +26,7 @@ const movePages = () => {
 };
 
 const showCurrentPage = () => {
+
   if (
     pageArr[currentPage].className === "contact page" ||
     pageArr[currentPage].className === "home page" ||
@@ -38,8 +39,6 @@ const showCurrentPage = () => {
   setTimeout(() => {
     pageArr[currentPage].style.transform = "translateX(0)";
   }, 200);
-
-  console.log(pageArr[currentPage]);
 };
 ///////////////////////////////////////////////////////////////////
 
