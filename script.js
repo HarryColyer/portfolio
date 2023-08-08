@@ -5,9 +5,13 @@ const homeContactBtn = document.querySelector(".home-btn");
 const pages = document.querySelectorAll(".page");
 const navLinks = document.querySelector(".nav-links");
 
-
-
+let currentPage = parseInt(localStorage.getItem("page")) || 0;
+console.log(currentPage)
 // Functions
+const updateLocalStorage = () => {
+  localStorage.setItem("page", currentPage)
+}
+
 const updatePages = () => {
   pagesToRight = pageArr.slice(currentPage + 1);
   pagesToLeft = pageArr.slice(0, currentPage);
@@ -42,7 +46,7 @@ const showCurrentPage = () => {
 };
 ///////////////////////////////////////////////////////////////////
 
-let currentPage = 0;
+
 const pageArr = [];
 
 pages.forEach((page) => {
@@ -52,10 +56,13 @@ pages.forEach((page) => {
 let pagesToRight = pageArr.slice(currentPage + 1);
 let pagesToLeft = pageArr.slice(0, currentPage);
 movePages();
+updatePages()
+showCurrentPage()
 
 // Event Listeners
 homeBtn.addEventListener("click", () => {
   currentPage = 0;
+  updateLocalStorage()
   updatePages();
   movePages();
   showCurrentPage();
@@ -63,6 +70,7 @@ homeBtn.addEventListener("click", () => {
 
 homeContactBtn.addEventListener("click", () => {
   currentPage = 4;
+  updateLocalStorage()
   updatePages();
   movePages();
   showCurrentPage();
@@ -74,6 +82,7 @@ pageLinks.forEach((link, idx) => {
       navLinks.className = "nav-links";
     }
     currentPage = idx;
+    updateLocalStorage()
     updatePages();
     movePages();
     showCurrentPage();
