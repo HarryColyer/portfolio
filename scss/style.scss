@@ -109,7 +109,7 @@ a {
     width: 100%;
     z-index: 1;
     border-bottom: 2px solid $text-color;
-    transition: max-height ease 1s, visibility ease 0.9s;
+    transition: max-height ease 0.5s, visibility ease 0.5s;
     overflow: hidden;
     &.active {
       visibility: visible;
@@ -146,7 +146,7 @@ a {
 
 // PAGE CONTAINER
 .page-container {
-  width: 100vw;
+  width: 100%;
   overflow-x: hidden;
 }
 
@@ -232,7 +232,6 @@ a {
 
 .projects {
   width: 100%;
-  height: $one-page;
   padding: 1em;
   display: flex;
   flex-direction: column;
@@ -248,18 +247,47 @@ a {
   }
   section {
     padding: 1em;
-    width: 80%;
+    width: 90%;
+    max-width: 360px;
     border: $content-border;
     box-shadow: $sm-box-shadow-r;
-    div {
+    margin-top: 5em;
+    font-size: $xs-font-size;
+    .img-container {
+      width: 100%;
       display: flex;
-      justify-content: center;
       align-items: center;
+      img {
+        width: 80%;
+      }
     }
     h4 {
-      text-align: center;
+      margin: 10px 0 10px 0;
+      
+      font-size: $md-font-size;
+    }
+    p {
+      margin: 15px 0;
     }
 
+    .link-container {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      margin: 1em 0;
+      a {
+        @include btn;
+        width: 50%;
+        text-align: center;
+        font-size: $xs-font-size;
+        &:first-of-type {
+          margin-right: 5px;
+        }
+        &:last-of-type {
+          margin-left: 5px;
+        }
+      }
+    }
   }
 }
 
